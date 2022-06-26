@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sunny.slice">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Poc">
+        <provider
+            android:name=".MySliceProvider"
+            android:authorities="com.sunny.slice.provider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.app.slice.category.SLICE" />
+
+                <data
+                    android:host="slice.sunny.com"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
+            </intent-filter>
+        </provider>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.sunny.slice.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.example.android.snippets"
+                    android:mimeType="text/html"
+                    android:pathPrefix="/my_cache"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AttackerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.android.settings.files"
+                    android:mimeType="txt/html"
+                    android:pathPrefix="/my_cache"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
