@@ -2,3 +2,4 @@ include ':sliceproviderapplication'
 include ':app'
 //include ':slice'
 rootProject.name = "poc"
+include ':appwidget'
