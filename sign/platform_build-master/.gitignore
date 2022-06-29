@@ -1,0 +1,6 @@
+*.iml
+*.pyc
+*.swp
+blueprint/
+kati/
+soong/

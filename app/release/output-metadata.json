@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.sunny.hello.poc",
+  "applicationId": "com.sunny.appwidget",
   "variantName": "processReleaseResources",
   "elements": [
     {
@@ -12,7 +12,7 @@
       "filters": [],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-release.apk"
+      "outputFile": "appwidget-release.apk"
     }
   ]
 }

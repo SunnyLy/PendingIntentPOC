@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sunny.appwidget">
+    package="com.sunny.appwidget"
+    android:sharedUserId="android.uid.system">
 
     <!--用于绑定AppWidget，只有系统应用才有用-->
     <uses-permission android:name="android.permission.BIND_APPWIDGET" />
